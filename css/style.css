@@ -1,0 +1,467 @@
+
+body {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-style: oblique;
+}
+.header {
+    padding: 20px; 
+}
+.contanir {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+.header .contanir .link{
+    position: relative;
+}
+.header .contanir .link:hover .icon span:nth-child(2){
+    width: 100%;
+}
+.header .contanir .link .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .contanir .link .icon span{
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 2px;
+    width: 100%;
+    
+}
+.header .link ul {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 300px;
+    position: absolute;
+   display: none;
+   transition: 0.2s;
+   z-index: 2;
+}
+@media (max-width:767px) {
+    .header .link ul {
+        min-width: 200px;
+        padding: 10px;
+    }
+}
+.header .link:hover ul{
+    display: block;
+}
+.header .link ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 0;
+    top: -19px;
+    right: 5px;
+}
+.header .link ul li {
+    color: #222;
+    margin-left: 10px;
+    padding: 7px;
+}
+.header .link ul a:not(:last-child)li{
+    border-bottom: 1px solid #ddd;
+}
+.header .link ul a {
+    text-decoration: none;
+    transition: 0.3s;
+    display: block
+    
+}
+.header .link ul a:hover{
+    padding-left: 15px;
+    transform: (20deg);
+}
+.header .contanir .link .icon span:nth-child(2){
+    width: 70%;
+    transition: 0.3s;
+}
+.header .contanir .logo {
+    width: 60px;
+}
+.landing {
+    background-image: url(../imge/rohit-tandon-9wg5jCEPBsw-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    flex-direction: column;
+    position: relative;
+}
+.intro {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    width: 320px;
+    text-align: center;
+}
+h1{
+    font-weight: 900;
+    color: #1a739d80;
+    font-style: oblique;
+    -webkit-text-stroke: thin;
+}
+.landing p{
+    color: #1a739d80;
+    font-size: 19px;
+    font-style: oblique;
+}
+.features{
+    padding-bottom: 60px;
+    padding-top: 60px;
+    background-color: #f6f6f6;
+}
+.features .contanir {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px , 1fr));
+    gap: 20px;
+}
+.features .contanir .feat {
+    padding: 20px;
+    text-align: center;
+}
+.features .contanir .feat i {
+    color: #1a739d80;
+}
+.features .contanir .feat h3 {
+    font-weight: 800;
+    text-transform: capitalize;
+    margin: 30px 0;
+}.features .contanir .feat p {
+    color: #777;
+    line-height: 1.7;
+    font-size: 18px;
+    text-align: justify;
+}
+.Services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.Services .contanir {
+    display: block;
+}
+.Services .special {
+    letter-spacing: -3px;
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+    color: #ebeced;
+    font-weight: 800;
+}
+@media (max-width:767px) {
+     .Services .special {
+        font-size: 80px;
+    }
+        .Services .special+p{
+            margin-top: -20px;
+        }
+}
+.Services .special + p{
+    text-align: center;
+    margin: -30px 0 0 ;
+    font-size: 20px;
+    color: #797979;
+    font-style: oblique;
+}
+.Services .Services-contanir{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    margin-top: 100px;
+}
+.Services .Services-contanir .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+@media (max-width:767px) {
+    .Services .Services-contanir .srv {
+        flex-direction: column;
+    text-align: center;        }
+}
+.Services .Services-contanir .srv i {
+    color: #1a739d80;
+   font-size: 25px;
+    flex-basis: 60px;
+}
+.Services .Services-contanir .srv .text{
+    flex: 1;
+}
+.Services .Services-contanir .srv .text h4{
+    margin: 0 0 20px;
+}
+.Services .Services-contanir .srv .text p{
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.Services-contanir .imge{
+    text-align: center;
+    position: relative;
+}
+.Services-contanir .imge img{
+    width: 260px;
+}
+.Services-contanir .imge::before{
+    content: "";
+    z-index: -1;
+        width: 100px;
+        height: 120%;
+        position: absolute;
+        top: -10%;
+        right: 23px;
+        background-color: #1a739d80;
+}
+.Portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.Portfolio .contanir {
+    display: block;
+}
+.Portfolio .special {
+    letter-spacing: -3px;
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+    color: #ebeced;
+    font-weight: 800;
+}
+@media (max-width:767px) {
+    .Portfolio .special {
+        font-size: 80px;
+    }
+
+    .Portfolio .special+p {
+        margin-top: -20px;
+    }
+}
+.Portfolio .special+p {
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+    font-style: oblique;
+}
+.Portfolio-contanir{
+     display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    margin-top: 80px;
+}
+.Portfolio-contanir .card{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+    box-shadow: 6px -5px 20px 2px #0000003b;
+    outline: 1px solid #aaa ;
+        border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+}
+.Portfolio-contanir .card:hover{
+    transform: scale(0.9);
+}
+.Portfolio-contanir .card:hover img {
+    opacity: 0.6;
+}
+.Portfolio-contanir img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.Portfolio-contanir .info{
+padding: 20px;
+}
+.Portfolio-contanir .info h4{
+    margin: 0;
+}
+.Portfolio-contanir .info p{
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #777;
+}
+.about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.about .contanir {
+    display: block;
+}
+.about .contanir .special {
+    letter-spacing: -3px;
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+    color: #ebeced;
+    font-weight: 800;
+}
+
+@media (max-width:767px) {
+    .about .special {
+        font-size: 80px;
+    }
+
+    .about .special+p {
+        margin-top: -20px;
+    }
+}
+
+.about .special+p {
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+    font-style: oblique;
+}
+.about .about-contanir {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(48%,1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.about .about-contanir .imgee{
+    width: 250px;
+    height: 320px;
+}
+.about .about-contanir .imgee img{
+    width: 100%;
+    outline: 2px solid #777777a5;
+    padding: 3px;
+}
+.about .about-contanir .coll{
+    position: relative;
+}
+.about .about-contanir hr{
+    width: 280px;
+    margin-left: 7px;
+   color: #1a739d80;
+}
+.about .about-contanir p{
+    line-height: 1.6;
+}
+.contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.contact .contanir{
+    display: block;
+}
+.contact .contanir .special {
+    letter-spacing: -3px;
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+    color: #ebeced;
+    font-weight: 800;
+}
+
+@media (max-width:767px) {
+    .contact .special {
+        font-size: 80px;
+    }
+
+    .contact .special+p {
+        margin-top: -20px;
+    }
+}
+
+.contact .special+p {
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+    font-style: oblique;
+}
+.contact-contanir{
+    text-align: center;
+}
+.contact-contanir .bn {
+    margin-bottom: 40px;
+}
+.contact-contanir a {
+    font-weight: 700;
+    color: #1a739d80;
+    text-decoration: none;
+    font-size: 25px;
+}
+.contact-contanir .socail {
+   margin-top: 23px;
+    color: #1a739d80;
+    font-size: 20px;
+}
+footer{
+    background-color: #273582;
+    text-align: center;
+    color: #000000;
+    font-size: 22px;
+    margin-top: -29px;
+    padding-top: 20px;
+    color: white;
+}
+footer span {
+    font-weight: bold;
+    color: #0d81b8;
+    font-size: 25px;
+}
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width : 768px) {
+    .contanir{
+        width: 750px;
+    }
+}
+@media (min-width : 992px) {
+    .contanir {
+        width: 970px;
+    }
+}
+@media (min-width : 1200px) {
+    .contanir {
+        width: 1170px;
+    }
+
+}
